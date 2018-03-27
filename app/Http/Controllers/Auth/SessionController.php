@@ -30,7 +30,11 @@ class SessionController extends Controller
      */
     public function getLogin()
     {
+<<<<<<< HEAD
         return view('Centaur::auth.login');
+=======
+        return view('centaur.auth.login');
+>>>>>>> 05ef1a9da8996592e5b038c73eddc83c07cbd3df
     }
 
     /**
@@ -44,7 +48,10 @@ class SessionController extends Controller
             'email' => 'required',
             'password' => 'required'
         ]);
+<<<<<<< HEAD
 
+=======
+>>>>>>> 05ef1a9da8996592e5b038c73eddc83c07cbd3df
         // Assemble Login Credentials
         $credentials = [
             'email' => trim($request->get('email')),

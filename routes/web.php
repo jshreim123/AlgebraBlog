@@ -15,8 +15,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 05ef1a9da8996592e5b038c73eddc83c07cbd3df
 // Authorization
 Route::get('login', 'Auth\SessionController@getLogin')->name('auth.login.form');
 Route::post('login', 'Auth\SessionController@postLogin')->name('auth.login.attempt');
@@ -43,7 +46,17 @@ Route::resource('users', 'UserController');
 // Roles
 Route::resource('roles', 'RoleController');
 
+<<<<<<< HEAD
 // Dashboard
 Route::get('dashboard', function () {
     return view('Centaur::dashboard');
 })->name('dashboard');
+=======
+// Posts
+Route::resource('posts', 'PostController');
+
+// Dashboard
+Route::get('dashboard', function () {
+    return view('Centaur::dashboard');
+})->name('dashboard');
+>>>>>>> 05ef1a9da8996592e5b038c73eddc83c07cbd3df

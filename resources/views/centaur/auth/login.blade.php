@@ -10,8 +10,14 @@
                 <h3 class="panel-title">Login</h3>
             </div>
             <div class="panel-body">
+<<<<<<< HEAD
                 <form accept-charset="UTF-8" role="form" method="post" action="{{ route('auth.login.attempt') }}">
                 <fieldset>
+=======
+                <form accept-charset="UTF-8" role="form" method="post" action="{{ route('auth.login.form') }}">
+                <fieldset>
+					
+>>>>>>> 05ef1a9da8996592e5b038c73eddc83c07cbd3df
                     <div class="form-group {{ ($errors->has('email')) ? 'has-error' : '' }}">
                         <input class="form-control" placeholder="E-mail" name="email" type="text" value="{{ old('email') }}">
                         {!! ($errors->has('email') ? $errors->first('email', '<p class="text-danger">:message</p>') : '') !!}
