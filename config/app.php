@@ -167,11 +167,7 @@ return [
         /*
          * Package Service Providers...
          */
-<<<<<<< HEAD
-		 Centaur\CentaurServiceProvider::class,
-=======
 		Centaur\CentaurServiceProvider::class,
->>>>>>> 05ef1a9da8996592e5b038c73eddc83c07cbd3df
 
         /*
          * Application Service Providers...
