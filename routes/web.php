@@ -40,11 +40,15 @@ Route::resource('users', 'UserController');
 // Roles
 Route::resource('roles', 'RoleController');
 
+
+// Posts
+Route::resource('posts', 'PostController');
+
+// Posts
+Route::resource('comments', 'CommentController');
+
 // Dashboard
 Route::get('dashboard', function () {
     return view('Centaur::dashboard');
 })->name('dashboard');
-// Posts
-Route::resource('posts', 'PostController');
-
 

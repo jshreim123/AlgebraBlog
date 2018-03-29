@@ -68,6 +68,15 @@ class Post extends Model
 	{
 		return $this->belongsTo('App\Models\User');
 	}	
+	
+	// Get the post comments.
+	
+	public function comments()
+	{
+		return $this->hasMany('App\Models\Comment')->where('status', 1);
+	}	
+	
+
 }
 
 

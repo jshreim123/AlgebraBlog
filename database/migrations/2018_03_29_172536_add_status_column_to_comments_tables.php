@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePostsTable extends Migration
+class AddStatusColumnToCommentsTables extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,8 @@ class CreatePostsTable extends Migration
      */
     public function up()
     {
-        Schema::create('posts', function (Blueprint $table) {
-            $table->increments('id');
-			$table->string('title');
-			$table->string('slug');
-			$table->text('content');
-			$table->unsignedInteger('user_id');
-            $table->timestamps();
+        Schema::table('comments', function (Blueprint $table) {
+            $table->boolean('status')->default(1)->after('post_id');
         });
     }
 
@@ -30,6 +25,8 @@ class CreatePostsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('posts');
+        Schema::table('comments', function (Blueprint $table) {
+            $table->dropColumn('status');
+        });
     }
 }
